@@ -2,12 +2,12 @@ kind: List
 apiVersion: v1
 items:
 - kind: ImageStream
-  apiVersion: v1beta1
+  apiVersion: v1
   metadata:
     name: hello-openshift
 
 - kind: DeploymentConfig
-  apiVersion: v1beta1
+  apiVersion: v1
   metadata:
     name: hello-openshift
   triggers:
@@ -38,7 +38,7 @@ items:
       replicas: 1
 
 - kind: Service
-  apiVersion: v1beta1
+  apiVersion: v1
   id: hello-openshift-service
   containerPort: 8080
   port: 27017
@@ -46,7 +46,7 @@ items:
     name: hello-openshift
 
 - kind: Route
-  apiVersion: v1beta1
+  apiVersion: v1
   id: hello-openshift-route
   metadata:
     name: hello-openshift-route
